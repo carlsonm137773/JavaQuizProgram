@@ -2,7 +2,12 @@ package com.quiz.main;
 
 import java.util.ArrayList;
 
+import javax.swing.JPanel;
+
 public class Quiz {
+	
+	JPanel panel;
+	
 	
 	private ArrayList<Question> questionArray;
 	private String quizName;
@@ -12,6 +17,12 @@ public class Quiz {
 	Quiz(String quizName){
 		this.quizName = quizName;
 		correctCount = 0;
+		
+		
+		loadQuizFromFile();
+		
+		
+		panel = new JPanel();
 	}
 	
 	public String getQuizName() {
@@ -19,17 +30,14 @@ public class Quiz {
 	}
 	
 	public void takeQuiz() {
-		for(Question q : questionArray) {
-			if(q.askQuestion()) {
-				correctCount ++;
-			}
-			else {
-				incorrectArray.add(q);
-			}
-		}
+		
 	}
 	
 	public int getCorrectCount() {
 		return correctCount;
+	}
+	
+	private void loadQuizFromFile() {
+		// file in for the quiz file name = quizName.csv
 	}
 }
