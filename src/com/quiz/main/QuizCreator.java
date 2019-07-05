@@ -1,12 +1,24 @@
 package com.quiz.main;
 
+import java.awt.CardLayout;
 import java.util.ArrayList;
 
-public class QuizCreator {
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class QuizCreator extends JFrame {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	ArrayList<Question> questionArray;
 	private String quizName; //quiz is saved as the quizName.csv
+	private static final String GETINFO = "Quiz Setup", MULTIQUESTION = "Multi Question", NUMBERQUESTION = "Number Question";
+	
 	
 	QuizCreator(){
+		
+		startUI();
 		
 	}
 	
@@ -27,6 +39,19 @@ public class QuizCreator {
 	}
 	
 	public void loadFromFile(String fileName) {
+		
+	}
+	
+	private void startUI() {
+		JPanel getInfo = new JPanel();
+		JPanel multiQuestion = new JPanel();
+		JPanel numberQuestion = new JPanel();
+		
+		
+		setLayout(new CardLayout());
+		add(getInfo, GETINFO);
+		add(multiQuestion, MULTIQUESTION);
+		add(numberQuestion, NUMBERQUESTION);
 		
 	}
 	
