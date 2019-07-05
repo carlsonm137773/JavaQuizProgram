@@ -1,9 +1,16 @@
+/**
+ * File: MultiQuestion.java
+ * Project JavaQuizProgram
+ * Created by: Matthew Carlson
+ * Email: carlsonm137773@student.vvc.edu
+ * Date: Jul 1, 2019
+ */
 package com.quiz.main;
 
 import java.util.LinkedList;
 
 public class MultiQuestion extends Question {
-	
+
 	LinkedList<Answer> answerList;
 
 	MultiQuestion(String question) {
@@ -14,7 +21,7 @@ public class MultiQuestion extends Question {
 	public void addAnswer(Answer answer) {
 		answerList.add(answer);
 	}
-	
+
 	public void removeAnswer(Answer answer) {
 		answerList.remove(answer);
 	}
@@ -24,6 +31,5 @@ public class MultiQuestion extends Question {
 		// TODO Auto-generated method stub
 		return false;
 	}
-	
-	
+
 }
