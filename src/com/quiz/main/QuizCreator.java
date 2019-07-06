@@ -22,6 +22,9 @@ public class QuizCreator extends JFrame {
 	private String quizName; // quiz is saved as the quizName.csv
 	private static final String GETINFO = "Quiz Setup", MULTIQUESTION = "Multi Question",
 			NUMBERQUESTION = "Number Question";
+	
+	JPanel getInfo;
+	QuestionCreator questionCreator;
 
 	QuizCreator() {
 
@@ -50,14 +53,14 @@ public class QuizCreator extends JFrame {
 	}
 
 	private void startUI() {
-		JPanel getInfo = new JPanel();
-		JPanel multiQuestion = new JPanel();
-		JPanel numberQuestion = new JPanel();
+		getInfo = new JPanel();
+		questionCreator = new QuestionCreator();
+
 
 		setLayout(new CardLayout());
 		add(getInfo, GETINFO);
-		add(multiQuestion, MULTIQUESTION);
-		add(numberQuestion, NUMBERQUESTION);
+		add(questionCreator, "QCreator");
+		
 
 	}
 

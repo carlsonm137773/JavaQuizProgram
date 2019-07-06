@@ -1,3 +1,10 @@
+/**
+ * File: Quiz.java
+ * Project JavaQuizProgram
+ * Created by: Matthew Carlson
+ * Email: carlsonm137773@student.vvc.edu
+ * Date: Jul 1, 2019
+ */
 package com.quiz.main;
 
 import java.util.ArrayList;
