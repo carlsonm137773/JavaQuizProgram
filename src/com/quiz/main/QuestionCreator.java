@@ -7,7 +7,8 @@
  */
 package com.quiz.main;
 
-import java.awt.CardLayout;
+import java.awt.BorderLayout;
+import java.awt.GridBagLayout;
 
 import javax.swing.JPanel;
 
@@ -22,12 +23,18 @@ public class QuestionCreator extends JPanel {
 	
 	QuestionCreator() {
 		multiQuestion = new JPanel();
-		numberQuestion = new JPanel();
+//		numberQuestion = new JPanel();
 		
-		setLayout(new CardLayout());
+//		setLayout(new CardLayout());
+		setLayout(new BorderLayout());
+	
+		add(multiQuestion, BorderLayout.CENTER);
 		
-		add(multiQuestion, "multi question");
-		add(numberQuestion, "number question");
+		multiQuestion.setLayout(new GridBagLayout());
+		
+		
+//		add(multiQuestion, "multi question");
+//		add(numberQuestion, "number question");
 	}
 
 }

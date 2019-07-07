@@ -11,25 +11,27 @@ import java.awt.BorderLayout;
 
 import javax.swing.JFrame;
 
-public class MainFrame extends JFrame {
+public class MainFrame {
 
 	public static final int WIDTH = 640, HEIGHT = WIDTH / 12 * 9;
 	public static final String TITLE = "Quiz Program";
 
 	private QuizCreator quizCreator;
 
-	private static final long serialVersionUID = 1L;
 
 	MainFrame() {
-		super(TITLE);
+		JFrame frame = new JFrame(TITLE);
+		
+		
 		quizCreator = new QuizCreator();
 
-		setSize(WIDTH, HEIGHT);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setVisible(true);
-		setLayout(new BorderLayout());
+		frame.setSize(WIDTH, HEIGHT);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setVisible(true);
+		
+		frame.setLayout(new BorderLayout());
 
-		add(quizCreator, BorderLayout.CENTER);
+		frame.add(quizCreator, BorderLayout.CENTER);
 
 	}
 
